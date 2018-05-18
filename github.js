@@ -38,7 +38,7 @@ const yourGitHubUserName = "iMeiji";
             }
         }
         removeArr.map((value) => {
-            root.item(0).removeChild(value);
+            value.parentNode.removeChild(value);
         });
     }
 
