@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Github index filter
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  filter your repo star/fork information
 // @author       https://github.com/iMeiji
 // @match       https://github.com/*
@@ -43,7 +43,7 @@ const yourGitHubUserName = "iMeiji";
     }
 
     function main() {
-        let root = document.getElementsByClassName("news column two-thirds");
+        let root = document.getElementsByClassName("news");
         let forkList = root.item(0).getElementsByClassName("fork");
         let startList = root.item(0).getElementsByClassName("watch_started");
         remove(forkList, root);
